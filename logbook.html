@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <title>Mrs. Ray's Bloodsugar Logs</title>
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/main.css">
+
+        <!-- start Mixpanel --><script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+        for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
+        mixpanel.init("d76fb94faf2de60011d832b99c7baa79");</script><!-- end Mixpanel -->
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.js"></script>
+       <script src="scripts.js"></script>
+       <script>
+         $(document).ready(fetchLogs);
+       </script>
+    </head>
+    <body id="logbook">
+
+      <div id="wrapper">
+        <ul>
+          <li class="dateSeparator">
+            <div class="dateBox">
+              <span>28</span>
+              <span>APR</span>
+            </div>
+
+            <div class="dayBox">Thursday</div>
+            <div class="records">3 Records</div>
+          </li>
+
+          <li class="log average">
+            <div class="emotion average"></div>
+            <div class="sugar">129</div>
+            <div class="time">12:29pm</div>
+          </li>
+
+          <li class="log worse">
+            <div class="emotion worse"></div>
+            <div class="sugar">129</div>
+            <div class="time">12:29pm</div>
+          </li>
+
+          <li class="log better">
+            <div class="emotion better"></div>
+            <div class="sugar">129</div>
+            <div class="time">12:29pm</div>
+          </li>
+
+          <li class="log worse">
+            <div class="emotion worse"></div>
+            <div class="sugar">129</div>
+            <div class="time">12:29pm</div>
+          </li>
+
+          <li class="log worse">
+            <div class="emotion worse"></div>
+            <div class="sugar">129</div>
+            <div class="time">12:29pm</div>
+          </li>
+
+          <li class="dateSeparator">
+            <div class="dateBox">
+              <span>28</span>
+              <span>APR</span>
+            </div>
+
+            <div class="dayBox">Thursday</div>
+            <div class="records">3 Records</div>
+          </li>
+
+          <li class="log average">
+            <div class="emotion average"></div>
+            <div class="sugar">129</div>
+            <div class="time">12:29pm</div>
+          </li>
+        </ul>
+      </div>
+
+    </body>
+</html>
+
+
+
+
+
+
+
+
+

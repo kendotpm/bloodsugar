@@ -23,7 +23,22 @@ body {
 
 }
 
-form {
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes shake {
+    0%, 100% {transform: translateX(0);}
+    10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+    20%, 40%, 60%, 80% {transform: translateX(10px);}
+}
+
+.shake {
+    animation-name: shake;
+}
+
+#wrapper {
   max-width: 300px;
   margin: 10px auto;
   padding: 10px 20px;
@@ -72,7 +87,7 @@ select {
   border-radius: 2px;
 }
 
-button {
+button, #feelingWrapper a {
   padding: 19px 39px 18px 39px;
   color: #333;
   background-color: #fff;
@@ -128,3 +143,87 @@ label.light {
   }
 
 }
+
+#feelingWrapper {}
+  #feelingWrapper a {display: inline-block; width: 32%; text-align: center; padding-left: 0px; padding: 80px 0 10px 0; line-height: 24px; text-decoration: none; font-size: 14px; background-size: contain; background-repeat: no-repeat; background-position: center 10px, top left; -webkit-tap-highlight-color: rgba(0,0,0,0);}
+    #better { background: url('../better.png'); }
+    #average { background: url('../average.png'); }
+    #worse { background: url('../worse.png'); }
+
+    #better.on { background-image: url('../better-over.png'), linear-gradient(to bottom, #ff4b61, #cf283d); color: #fff;}
+    #average.on { background-image: url('../average-over.png'), linear-gradient(to bottom, #ff4b61, #cf283d); color: #fff;}
+    #worse.on { background-image: url('../worse-over.png'), linear-gradient(to bottom, #ff4b61, #cf283d); color: #fff;}
+
+label.error {color: yellow;}
+input.error {border: solid 1px yellow;}
+
+#logbook {background: #1b2a39;}
+#logbook #wrapper {max-width: 100%; padding-right: 0px; padding-left: 0px;}
+
+ul {padding: 0px 0px; margin: 0px;}
+  li {border-top: solid 1px #1b2a39; border-bottom: solid 1px #1b2a39; line-height: 65px; padding: 0 10px;}
+
+  .dateSeparator {
+    background: #007fb2;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .dateSeparator:before {
+      content: '';
+      width: 2px;
+      height: 50%;
+      position: absolute;
+      bottom: 0px;
+      left: 31px;
+      background: #005d82;
+      z-index: 1;
+    }
+
+    .dateSeparator div {float: left;}
+    .dateBox { background: #005d82; width: 45px; height: 45px; color: #fff; border-radius: 45px; display: flex; flex-direction: column; justify-content: center; margin-top: 8px; position: relative; z-index: 2}
+      .dateBox span { display: block; font-size: 12px; line-height: 12px; text-align: center;}
+      .dateBox span:first-child {font-size: 16px;}
+    .dayBox { font-size: 18px; font-weight: 100; margin-left: 15px;}
+    div.records { float: right; font-size: 12px; opacity: 0.8; margin-right: 10px;}
+
+
+  .log { background: #202f3f; position: relative;}
+  .log div {float: left;}
+
+    .emotion { width: 45px; height: 45px; color: #fff; border-radius: 45px; border: solid 2px #22a35a; margin-top: 8px; background-size: contain; background-repeat: no-repeat; background-position: 0 3px; position: relative; z-index: 2;}
+
+    .log:before {
+      content: '';
+      width: 2px;
+      height: 100%;
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      left: 31px;
+      background: #22a35a;
+      z-index: 1;
+    }
+
+      .log.average:before {background: #207645;}
+      .log.better:before {background: #22a35a;}
+      .log.worse:before {background: #ce5144;}
+
+      .log.worse {background: none;}
+
+    .log:last-child:before {
+      content: '';
+      width: 2px;
+      height: 50%;
+      position: absolute;
+      top: 0px;
+      left: 31px;
+      background: #22a35a;
+      z-index: 1;
+    }
+      .emotion.average { background-image: url('../average.png'); background-color: #207645; border-color: #207645;}
+      .emotion.better {background-image: url('../better.png'); background-color: #22a35a; border-color: #22a35a;}
+      .emotion.worse { background-image: url('../worse.png'); background-color: #ce5144; border-color: #ce5144;}
+
+    .sugar { font-size: 20px; font-weight: bold; letter-spacing: -1px; margin-left: 20px; }
+    div.time { float: right; margin-right: 10px; font-size: 12px; opacity: 0.9; }
